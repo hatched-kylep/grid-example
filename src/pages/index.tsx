@@ -64,11 +64,24 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.header`
-  grid-column: col-start / span 12;
+  grid-column: col-start / span 4;
+
+  @media (min-width: 480px) {
+    grid-column: col-start / span 8;
+  }
+
+  @media (min-width: 1024px) {
+    grid-column: col-start / span 12;
+  }
 `;
 
 const SideNav = styled.nav`
-  grid-column: col-start / span 12;
+  grid-column: col-start / span 4;
+
+  @media (min-width: 480px) {
+    grid-column: col-start / span 2;
+    grid-row: 2 / 4;
+  }
 
   @media (min-width: 1024px) {
     grid-column: col-start / span 2;
@@ -77,7 +90,12 @@ const SideNav = styled.nav`
 `;
 
 const Content = styled.article`
-  grid-column: col-start / span 12;
+  grid-column: col-start / span 4;
+
+  @media (min-width: 480px) {
+    grid-column: col-start 3 / span 6;
+    grid-row: 2 / 4;
+  }
 
   @media (min-width: 1024px) {
     grid-column: col-start 3 / span 8;
@@ -88,6 +106,10 @@ const Content = styled.article`
 const Side = styled.aside`
   grid-column: col-start / span 2;
 
+  @media (min-width: 480px) {
+    grid-column: col-start / span 4;
+  }
+
   @media (min-width: 1024px) {
     grid-column: col-start 11 / span 2;
     grid-row: 2;
@@ -97,6 +119,10 @@ const Side = styled.aside`
 const Ad = styled.aside`
   grid-column: col-start 3 / span 2;
 
+  @media (min-width: 480px) {
+    grid-column: col-start 5 / span 4;
+  }
+
   @media (min-width: 1024px) {
     grid-column: col-start 11 / span 2;
     grid-row: 3;
@@ -104,7 +130,15 @@ const Ad = styled.aside`
 `;
 
 const Footer = styled.footer`
-  grid-column: col-start / span 12;
+  grid-column: col-start / span 4;
+
+  @media (min-width: 480px) {
+    grid-column: col-start / span 8;
+  }
+
+  @media (min-width: 1024px) {
+    grid-column: col-start / span 12;
+  }
 `;
 
 export default Home;
