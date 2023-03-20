@@ -44,8 +44,23 @@ const Home = () => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  gap: 12px;
+  margin: 0 24px;
+
+  @media (min-width: 480px) {
+    display: grid;
+    grid-template-columns: repeat(8, [col-start] 1fr);
+    gap: 16px;
+    margin: 0 32px;
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap: 16px;
+    margin: 0 32px;
+  }
 `;
 
 const Header = styled.header`
@@ -55,7 +70,7 @@ const Header = styled.header`
 const SideNav = styled.nav`
   grid-column: col-start / span 12;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     grid-column: col-start / span 2;
     grid-row: 2 / 4;
   }
@@ -64,25 +79,25 @@ const SideNav = styled.nav`
 const Content = styled.article`
   grid-column: col-start / span 12;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     grid-column: col-start 3 / span 8;
     grid-row: 2 / 4;
   }
 `;
 
 const Side = styled.aside`
-  grid-column: col-start / span 12;
+  grid-column: col-start / span 2;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     grid-column: col-start 11 / span 2;
     grid-row: 2;
   }
 `;
 
 const Ad = styled.aside`
-  grid-column: col-start / span 12;
+  grid-column: col-start 3 / span 2;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     grid-column: col-start 11 / span 2;
     grid-row: 3;
   }
