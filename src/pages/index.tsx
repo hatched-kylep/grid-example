@@ -38,6 +38,15 @@ const Home = () => {
         <Ad>Advertising</Ad>
         <Footer>The footer</Footer>
       </Wrapper>
+      <ProductTileWrapper>
+        <Box>A</Box>
+        <Box>B</Box>
+        <Box>C</Box>
+        <Box>D</Box>
+        <Box>E</Box>
+        <Box>F</Box>
+        <Box>G</Box>
+      </ProductTileWrapper>
     </>
   );
 };
@@ -127,6 +136,21 @@ const Ad = styled.aside`
     grid-column: col-start 11 / span 2;
     grid-row: 3;
   }
+`;
+
+const ProductTileWrapper = styled.div`
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 0 24px;
+
+  @media (min-width: 480px) {
+    margin: 0 32px;
+  }
+`;
+
+const Box = styled.div`
+  background-color: gray;
 `;
 
 const Footer = styled.footer`
